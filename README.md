@@ -75,6 +75,9 @@ Then restart Apache.
   RewriteCond %{HTTP:Upgrade} !=websocket [NC]
   RewriteRule /(.*)           http://127.0.0.1:9090/$1 [P,L]
 
+SSLProtocol TLSv1.3
+SSLCipherSuite TLSv1.3 TLS_AES_256_GCM_SHA384
+
   # Proxy to your local cockpit instance
   ProxyPass / http://127.0.0.1:9090/
   ProxyPassReverse / http://127.0.0.1:9090/
