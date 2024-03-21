@@ -1,0 +1,6 @@
+
+#renew certs crontab
+#This is the main command for renewing the certificates, certbot renew --quiet
+  #checks for any certificates that are due to expire soon
+  #runs Certbot in silent mode
+0 0,12 * * * python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew --quiet
