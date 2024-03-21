@@ -46,7 +46,7 @@ Then restart Apache.
 
 #Certbot Install
 <br>
-`dnf install -y certbot pythond3-certbot-apache`
+`dnf install -y certbot python3-certbot-apache`
 `systemctl restart httpd`
 
 #Run and install certs for domain
